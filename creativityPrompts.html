@@ -1,0 +1,199 @@
+<html> 
+    <head>
+    <title>Creativity prompts</title>
+        <style>
+            body {
+                text-align: center;
+                
+            }
+            .flex {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+<script>
+
+const cards = [
+
+// Set 1
+{id: 1, title: "Reverse the process.", description: "", isBonus: false},
+  {id: 2, title: "Imagine your work in a different medium.", description: "", isBonus: false},
+  {id: 3, title: "What would you do if you weren't afraid?", description: "", isBonus: false},
+  {id: 4, title: "Introduce an element of randomness.", description: "", isBonus: false},
+  {id: 5, title: "Embrace the limitations.", description: "", isBonus: false},
+  {id: 6, title: "Disconnect from outcomes.", description: "", isBonus: false},
+  {id: 7, title: "Merge two unrelated ideas.", description: "", isBonus: false},
+  {id: 8, title: "Seek out what's not there.", description: "", isBonus: false},
+  {id: 9, title: "Use silence as a part of your creation.", description: "", isBonus: false},
+  {id: 10, title: "Break the rules you've set for yourself.", description: "", isBonus: false},
+  
+  // Set 2
+  {id: 11, title: "Simplify to the core.", description: "", isBonus: false},
+  {id: 12, title: "Amplify the subtle details.", description: "", isBonus: false},
+  {id: 13, title: "What's the worst that could happen?", description: "", isBonus: false},
+  {id: 14, title: "Shift your perspective physically.", description: "", isBonus: false},
+  {id: 15, title: "Turn it upside down.", description: "", isBonus: false},
+  {id: 16, title: "Explore the space between.", description: "", isBonus: false},
+  {id: 17, title: "Go outside your comfort zone.", description: "", isBonus: false},
+  {id: 18, title: "Let a dream guide you.", description: "", isBonus: false},
+  {id: 19, title: "Introduce a constraint.", description: "", isBonus: false},
+  {id: 20, title: "Make an unexpected choice.", description: "", isBonus: false},
+  
+  // Set 3
+  {id: 21, title: "Revisit your childhood for inspiration.", description: "", isBonus: false},
+  {id: 22, title: "Connect the unconnected.", description: "", isBonus: false},
+  {id: 23, title: "Use a method you've avoided.", description: "", isBonus: false},
+  {id: 24, title: "Apply a color you rarely use.", description: "", isBonus: false},
+  {id: 25, title: "Write your idea and then translate it.", description: "", isBonus: false},
+  {id: 26, title: "Alter your toolset.", description: "", isBonus: false},
+  {id: 27, title: "Focus on what you're resisting.", description: "", isBonus: false},
+  {id: 28, title: "Create in a different time frame.", description: "", isBonus: false},
+  {id: 29, title: "Combine form and function in a new way.", description: "", isBonus: false},
+  {id: 30, title: "Remove something considered essential.", description: "", isBonus: false},
+  
+  // Set 4
+  {id: 31, title: "What part of your project scares you? Tackle it first.", description: "", isBonus: false},
+  {id: 32, title: "Imagine your project is a gift. Who is it for?", description: "", isBonus: false},
+  {id: 33, title: "Create a physical prototype.", description: "", isBonus: false},
+  {id: 34, title: "Use technology in a way it wasn't intended.", description: "", isBonus: false},
+  {id: 35, title: "Find a pattern in nature and apply it.", description: "", isBonus: false},
+  {id: 36, title: "Translate your project into music.", description: "", isBonus: false},
+  {id: 37, title: "What would make this impossible? Do that.", description: "", isBonus: false},
+  {id: 38, title: "Use the least used sense in your work.", description: "", isBonus: false},
+  {id: 39, title: "Destroy to create.", description: "", isBonus: false},
+  {id: 40, title: "Make it wearable.", description: "", isBonus: false},
+  
+  // Set 5
+  {id: 41, title: "Exaggerate the most minor detail.", description: "", isBonus: false},
+  {id: 42, title: "Limit yourself to black and white.", description: "", isBonus: false},
+  {id: 43, title: "Create something useless but beautiful.", description: "", isBonus: false},
+  {id: 44, title: "Mimic the workflow of someone you admire.", description: "", isBonus: false},
+  {id: 45, title: "Change your work's scale drastically.", description: "", isBonus: false},
+  {id: 46, title: "Make it interactive.", description: "", isBonus: false},
+  {id: 47, title: "Design it for children.", description: "", isBonus: false},
+  {id: 48, title: "What if it had to be done in zero gravity?", description: "", isBonus: false},
+  {id: 49, title: "Make a version that lasts forever.", description: "", isBonus: false},
+  {id: 50, title: "Create a disposable version.", description: "", isBonus: false},
+  
+  // Set 6
+  {id: 51, title: "Incorporate a mirror as a concept or object.", description: "", isBonus: false},
+  {id: 52, title: "Design it to evolve over time.", description: "", isBonus: false},
+  {id: 53, title: "What would nature do?", description: "", isBonus: false},
+  {id: 54, title: "Use only recycled materials.", description: "", isBonus: false},
+  {id: 55, title: "It must be experienced at night.", description: "", isBonus: false},
+  {id: 56, title: "Incorporate a secret.", description: "", isBonus: false},
+  {id: 57, title: "Make it modular.", description: "", isBonus: false},
+  {id: 58, title: "It should require teamwork.", description: "", isBonus: false},
+  {id: 59, title: "Design it for a single use.", description: "", isBonus: false},
+  {id: 60, title: "Make it tell a story.", description: "", isBonus: false},
+  
+  // Set 7
+  {id: 61, title: "It should be invisible.", description: "", isBonus: false},
+  {id: 62, title: "Make it with your non-dominant hand.", description: "", isBonus: false},
+  {id: 63, title: "It should make a sound.", description: "", isBonus: false},
+  {id: 64, title: "It should move.", description: "", isBonus: false},
+  {id: 65, title: "It must be biodegradable.", description: "", isBonus: false},
+  {id: 66, title: "Let weather conditions shape it.", description: "", isBonus: false},
+  {id: 67, title: "It should change color.", description: "", isBonus: false},
+  {id: 68, title: "Make it from a single material.", description: "", isBonus: false},
+  {id: 69, title: "It should use solar energy.", description: "", isBonus: false},
+  {id: 70, title: "It should reflect its maker.", description: "", isBonus: false},
+  
+  // Set 8
+  {id: 71, title: "Make it in a way that it can be mailed.", description: "", isBonus: false},
+  {id: 72, title: "It should cast a shadow.", description: "", isBonus: false},
+  {id: 73, title: "Design it to be built by a community.", description: "", isBonus: false},
+  {id: 74, title: "It should fit in the palm of a hand.", description: "", isBonus: false},
+  {id: 75, title: "Make it as a tribute to a hero.", description: "", isBonus: false},
+  {id: 76, title: "It should require secrecy to be made.", description: "", isBonus: false},
+  {id: 77, title: "Make it with tools you create yourself.", description: "", isBonus: false},
+  {id: 78, title: "It should be inspired by a poem.", description: "", isBonus: false},
+  {id: 79, title: "It must be multifunctional.", description: "", isBonus: false},
+  {id: 80, title: "It should be wearable as an accessory.", description: "", isBonus: false},
+  
+  // Set 9
+  {id: 81, title: "It should incorporate elements from space.", description: "", isBonus: false},
+  {id: 82, title: "Design it to be experienced in complete darkness.", description: "", isBonus: false},
+  {id: 83, title: "It should help someone in need.", description: "", isBonus: false},
+  {id: 84, title: "Make it using only found objects.", description: "", isBonus: false},
+  {id: 85, title: "It should be a collaboration with an animal.", description: "", isBonus: false},
+  {id: 86, title: "Design it to be experienced with closed eyes.", description: "", isBonus: false},
+  {id: 87, title: "It should contain a message only visible under UV light.", description: "", isBonus: false},
+  {id: 88, title: "Make it symbolize a taboo.", description: "", isBonus: false},
+  {id: 89, title: "It must be activated by voice.", description: "", isBonus: false},
+  {id: 90, title: "It should double as a habitat for wildlife.", description: "", isBonus: false},
+  
+  // Set 10
+  {id: 91, title: "It should be inspired by a historical event.", description: "", isBonus: false},
+  {id: 92, title: "Make it as if it were illegal.", description: "", isBonus: false},
+  {id: 93, title: "Design it for someone specific in another culture.", description: "", isBonus: false},
+  {id: 94, title: "It should be inspired by a dream.", description: "", isBonus: false},
+  {id: 95, title: "Make it using traditional craftsmanship techniques.", description: "", isBonus: false},
+  {id: 96, title: "It must function as a puzzle.", description: "", isBonus: false},
+  {id: 97, title: "Design it to be experienced at high speeds.", description: "", isBonus: false},
+  {id: 98, title: "It should use water as a primary material.", description: "", isBonus: false},
+  {id: 99, title: "Make it react to touch.", description: "", isBonus: false},
+  {id: 100, title: "It should age beautifully.", description: "", isBonus: false},
+  
+  // Set 11
+  {id: 101, title: "Make it with a hidden compartment.", description: "", isBonus: false},
+  {id: 102, title: "It should be inspired by a myth.", description: "", isBonus: false},
+  {id: 103, title: "Design it to be assembled in the dark.", description: "", isBonus: false},
+  {id: 104, title: "Make it as an homage to a forgotten technology.", description: "", isBonus: false},
+  {id: 105, title: "It should incorporate a live element (plant, bacteria).", description: "", isBonus: false},
+  {id: 106, title: "Design it to be seen from above.", description: "", isBonus: false},
+  {id: 107, title: "Make it change with the seasons.", description: "", isBonus: false},
+  {id: 108, title: "It must be a fusion of art and utility.", description: "", isBonus: false},
+  {id: 109, title: "Design it to be worn on the head.", description: "", isBonus: false},
+  {id: 110, title: "Make it with materials from your immediate surroundings.", description: "", isBonus: false},
+  
+
+// Bonus Cards
+{id: 111, title: "Wildcard", description: "Do the opposite of your last decision. This card is a game-changer, prompting you to reconsider and possibly reverse your last creative decision, encouraging flexibility and openness to change.", isBonus: true},
+{id: 112, title: "Time Travel", description: "Imagine how this would be done 100 years ago and 100 years in the future. This card stretches your imagination across time, inviting you to incorporate elements of past and future techniques or visions into your current work.", isBonus: true},
+{id: 113, title: "The Oracle", description: "Ask someone else to choose a card for you and interpret it. This card brings an external influence into your creative process, adding a layer of collaboration or chance based on another person's interpretation and selection.", isBonus: true},
+{id: 114, title: "Sensory Swap", description: "If your project could engage a sense it currently doesn't, which would it be? Adapt your work to stimulate this new sense.", isBonus: true},
+{id: 115, title: "Environmental Response", description: "Design your project to react to the environment it's in. How does it change with the weather, the temperature, or the presence of people?", isBonus: true},
+{id: 116, title: "Random Constraint", description: "Roll a dice to choose a constraint: 1) must float, 2) must glow in the dark, 3) must be edible, 4) must be collapsible, 5) must be silent, 6) must be musical. Apply it.", isBonus: true},
+{id: 117, title: "Invisible Influence", description: "Incorporate an aspect that is only perceptible to you. How does this secret layer influence the overall experience?", isBonus: true},
+{id: 118, title: "Historical Mashup", description: "Merge two periods in history to inspire your project. How do these eras clash or complement each other in your creation?", isBonus: true},
+{id: 119, title: "Dual Purposes", description: "Design your project to serve an opposite or unrelated function simultaneously. What new uses can emerge from this duality?", isBonus: true}
+
+];
+
+
+
+function generate () {
+    const randomIndex = Math.floor(Math.random() * cards.length);
+    const randomCard = cards[randomIndex];
+    document.getElementById("title").innerText = randomCard.title;
+    document.getElementById("description").innerText = randomCard.description;
+    document.getElementById("number").innerText = randomCard.id;
+    if(randomCard.isBonus) {
+        document.getElementById("bonus").innerText = "BONUS!";
+    }
+    else {
+        document.getElementById("bonus").innerText = "";
+    }
+}
+
+</script>
+</head>
+<body>
+    <h1>Creativity prompts</h1>
+    <div class="flex">
+        <div>
+    <h2 id="title"></h2>
+    <h3 id="bonus"></h3>
+    <p id="description">
+        
+    </p>
+    <p id="number"></p>
+
+    <button type="button" onclick="generate()">Generate</button>
+</div>
+</div>
+</body>
+</html>
