@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vincepunkrock 's GitHub Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>vincepunkrock's GitHub Page</h1>
+    <p>Explore my projects:</p>
+    <a href="https://vincepunkrock.githubpages.io/creativityPrompts.html">Creativity Prompts Project</a>
+</body>
+</html>
